@@ -363,3 +363,102 @@ btn = Button(root, text='Open second window', command=open).pack()
 
 root.mainloop()
 ```
+## 12_FileDialog
+```python
+from tkinter import *
+from PIL import ImageTk, Image
+from tkinter import filedialog
+
+root = Tk()
+root.title('Message Box')
+root.iconbitmap(r"C:\Users\Samsung\Desktop\game.ico")
+def open():
+    global my_img
+    dir = r"C:\Users\Samsung\Desktop\General\Projects\Python learning\Python Notes\Tkinter - PracticeFolder\Image_Folder"
+    root.filename = filedialog.askopenfilename(initialdir=dir, title='Select A File', filetypes=(("jpg files","*.jpg"),("all files","*.*")))
+    #Get file full path
+    my_img = ImageTk.PhotoImage(Image.open(root.filename))
+    my_label = Label(root, text=root.filename).pack()
+    my_image_label = Label(root, image=my_img).pack()
+
+my_btn = Button(root, text="Open File",command=open).pack()
+
+root.mainloop()
+```
+## 13_Slider
+```python
+from tkinter import *
+from PIL import ImageTk, Image
+
+root = Tk()
+root.title('Message Box')
+root.iconbitmap(r"C:\Users\Samsung\Desktop\game.ico")
+root.geometry('400x400')
+
+vertical = Scale(root, from_=0, to=200)
+vertical.pack()
+
+def slide():
+    myLabel = Label(root, text=horizontal.get()).pack()
+    root.geometry(str(horizontal.get()) + "x" + str(vertical.get()))
+
+horizontal = Scale(root, from_=0, to=400, orient=HORIZONTAL)
+horizontal.pack()
+
+my_btn = Button(root, text="Click Me!", command=slide).pack()
+
+root.mainloop()
+```
+## 14_Checkboxes
+```python
+from tkinter import *
+from PIL import ImageTk, Image
+
+root = Tk()
+root.title('Message Box')
+root.iconbitmap(r"C:\Users\Samsung\Desktop\game.ico")
+root.geometry('400x400')
+
+def show():
+    myLabel = Label(root, text=var.get()).pack()
+
+var = StringVar()
+
+c = Checkbutton(root, text="Would you like to supersize your order?", variable=var, onvalue="Yes", offvalue="No")
+c.deselect()
+c.pack()
+
+
+myButton = Button(root, text="Show selection", command=show).pack()
+root.mainloop()
+```
+## 15_Dropdown_Boxes
+```python
+from tkinter import *
+from PIL import ImageTk, Image
+
+root = Tk()
+root.title('Message Box')
+root.iconbitmap(r"C:\Users\Samsung\Desktop\game.ico")
+root.geometry('400x400')
+
+def show():
+    myLabel = Label(root, text=clicked.get()).pack()
+
+options = [
+    "Monday", 
+    "Tuesday", 
+    "Wednesday", 
+    "Thursday", 
+    "Friday"
+]    
+
+clicked = StringVar()
+clicked.set("Monday")
+
+drop = OptionMenu(root, clicked, *options)
+drop.pack()
+
+myButton = Button(root, text="Show Selection", command=show).pack()
+root.mainloop()
+```
