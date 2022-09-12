@@ -3,15 +3,13 @@ from PIL import ImageTk,Image
 
 root = Tk()
 root.title('image viewer')
-root.iconbitmap(r"C:\Users\Samsung\Desktop\game.ico")
+root.iconbitmap("Image_Folder/icon.ico")
 
-dir_str = r"C:\Users\Samsung\Desktop\General\Projects\Python learning\Python Notes\Tkinter - PracticeFolder\Image_Folder"
-
-my_img1 = ImageTk.PhotoImage(Image.open(dir_str +r"\1.jpg"))
-my_img2 = ImageTk.PhotoImage(Image.open(dir_str +r"\2.jpg"))
-my_img3 = ImageTk.PhotoImage(Image.open(dir_str +r"\3.jpg"))
-my_img4 = ImageTk.PhotoImage(Image.open(dir_str +r"\4.jpg"))
-my_img5 = ImageTk.PhotoImage(Image.open(dir_str +r"\5.jpg"))
+my_img1 = ImageTk.PhotoImage(Image.open("Image_Folder/1.jpg"))
+my_img2 = ImageTk.PhotoImage(Image.open("Image_Folder/2.jpg"))
+my_img3 = ImageTk.PhotoImage(Image.open("Image_Folder/3.jpg"))
+my_img4 = ImageTk.PhotoImage(Image.open("Image_Folder/4.jpg"))
+my_img5 = ImageTk.PhotoImage(Image.open("Image_Folder/5.jpg"))
 
 image_list = [my_img1, my_img2, my_img3, my_img4, my_img5]
 

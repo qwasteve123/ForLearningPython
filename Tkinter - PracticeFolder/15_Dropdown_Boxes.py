@@ -3,7 +3,7 @@ from PIL import ImageTk, Image
 
 root = Tk()
 root.title('Message Box')
-root.iconbitmap(r"C:\Users\Samsung\Desktop\game.ico")
+root.iconbitmap("Image_Folder/icon.ico")
 root.geometry('400x400')
 
 def show():

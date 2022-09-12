@@ -4,7 +4,7 @@ from tkinter import messagebox
 
 root = Tk()
 root.title('Message Box')
-root.iconbitmap(r"C:\Users\Samsung\Desktop\game.ico")
+root.iconbitmap("Image_Folder/icon.ico")
 
 # showinfo, showerror, askquestion, askokcancel, askyesno
 

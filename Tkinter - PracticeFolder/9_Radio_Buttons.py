@@ -2,12 +2,9 @@ from msilib.schema import RadioButton
 from tkinter import *
 from PIL import ImageTk, Image
 
-from tkinter import *
-from PIL import ImageTk, Image
-
 root = Tk()
 root.title('Image Viewer')
-root.iconbitmap(r"C:\Users\Samsung\Desktop\game.ico")
+root.iconbitmap("Image_Folder/icon.ico")
 
 #Let variable get values from elements
 r = IntVar()

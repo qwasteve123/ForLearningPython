@@ -3,7 +3,7 @@ from PIL import ImageTk, Image
 
 root = Tk()
 root.title('Image Viewer')
-root.iconbitmap(r"C:\Users\Samsung\Desktop\game.ico")
+root.iconbitmap("Image_Folder/icon.ico")
 
 # frame = LabelFrame(root, text='This is my frame...', padx= 50, pady= 50)
 frame = LabelFrame(root, padx= 50, pady= 50)

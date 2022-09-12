@@ -4,10 +4,11 @@ from tkinter import filedialog
 
 root = Tk()
 root.title('Message Box')
-root.iconbitmap(r"C:\Users\Samsung\Desktop\game.ico")
+root.iconbitmap("Image_Folder/icon.ico")
+
 def open():
     global my_img
-    dir = r"C:\Users\Samsung\Desktop\General\Projects\Python learning\Python Notes\Tkinter - PracticeFolder\Image_Folder"
+    dir = "Image_Folder"
     root.filename = filedialog.askopenfilename(initialdir=dir, title='Select A File', filetypes=(("jpg files","*.jpg"),("all files","*.*")))
     #Get file full path
     my_img = ImageTk.PhotoImage(Image.open(root.filename))
